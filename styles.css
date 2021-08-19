@@ -1,0 +1,232 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+
+	/* ## Colors */
+
+	/* ### Primary */
+
+	--color-Strong-cyan: hsl(172, 67%, 45%);
+
+	/*### Neutral*/
+
+	--color-Very-dark-cyan: hsl(183, 100%, 15%);
+	--color-Dark-grayish-cyan: hsl(186, 14%, 43%);
+	--color-Dark-grayish-cyan2: hsl(184, 14%, 56%);
+	--color-Light-grayish-cyan: hsl(185, 41%, 84%);
+	--color-Light-grayish-cyan2: hsl(189, 41%, 97%);
+	--color-White: hsl(0, 0%, 100%);
+}
+
+body {
+	font-family: "Space Mono";
+	font-size: 2.4rem;
+	background-color: var(--color-Light-grayish-cyan);
+}
+
+.logo {
+	text-align: center;
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+}
+
+.container {
+	width: 70%;
+	margin: auto;
+	overflow: hidden;
+	background-color: var(--color-White);
+	border-radius: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 4rem;
+	gap: 4rem;
+}
+
+.input-details {
+	padding: 4rem;
+}
+
+.bill-label {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	color: var(--color-Dark-grayish-cyan);
+}
+
+.input {
+	border: none;
+	text-align: right;
+	padding: 1rem 1rem;
+	width: 100%;
+	background-color: var(--color-Light-grayish-cyan2);
+	background-repeat: no-repeat;
+	background-position: 3% 50%;
+	outline: none;
+}
+
+.input[type="text"] {
+	font-size: inherit;
+	color: var(--color-Very-dark-cyan);
+	font-weight: 700;
+	font-family: inherit;
+}
+
+.input-amount {
+	background-image: url(./images/icon-dollar.svg);
+	margin-bottom: 3rem;
+}
+
+.input:focus {
+	border: 2px solid var(--color-Strong-cyan);
+}
+
+.number-of-people-input {
+	background-image: url(./images/icon-person.svg);
+}
+
+.select-tip-label {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	color: var(--color-Dark-grayish-cyan);
+}
+
+.select-tip-buttons {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	margin-bottom: 3rem;
+}
+
+.select-tip-buttons > * {
+	padding: 2rem 0.5rem;
+	border-radius: 10px;
+	border: none;
+	background-color: var(--color-Very-dark-cyan);
+	color: var(--color-White);
+	font-size: 2rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+/* .select-tip-buttons button:hover {
+	background-color: var(--color-Light-grayish-cyan);
+} */
+.select-tip-buttons input {
+	width: 100%;
+	background-color: var(--color-Light-grayish-cyan2);
+	text-align: center;
+	outline: none;
+}
+
+.select-tip-buttons input:focus {
+	border: 1px solid var(--color-Strong-cyan);
+}
+
+.select-tip-buttons input[type="text"] {
+	font-size: 1.8rem;
+	color: var(--color-Very-dark-cyan);
+}
+
+.number-of-people-label {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	font-size: 2rem;
+	color: var(--color-Dark-grayish-cyan);
+}
+
+.error-msg {
+	color: orangered;
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+.display-information {
+	background-color: var(--color-Very-dark-cyan);
+	padding: 6rem;
+	border-radius: 20px;
+}
+.tip-amount {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 4rem;
+}
+.label h3 {
+	color: var(--color-White);
+	font-size: 2rem;
+}
+.label p {
+	color: var(--color-Dark-grayish-cyan2);
+	font-size: 1.6rem;
+}
+
+.display {
+	color: var(--color-Strong-cyan);
+}
+
+.total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12rem;
+}
+
+.btn-reset {
+	width: 100%;
+	border: none;
+	padding: 2rem 0;
+	border-radius: 5px;
+	text-transform: uppercase;
+	color: var(--color-Very-dark-cyan);
+	background-color: var(--color-Dark-grayish-cyan2);
+	font-size: inherit;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.btn-reset:hover {
+	background-color: var(--color-Light-grayish-cyan);
+}
+
+/*  Media Queries*/
+
+@media screen and (max-width: 1366px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	html {
+		font-size: 42.5%;
+	}
+
+	.container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+	}
+	.input-details {
+		padding: 1rem;
+	}
+
+	.select-tip-buttons {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+}

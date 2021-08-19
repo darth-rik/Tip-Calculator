@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+
+		<title>Tip calculator app</title>
+	</head>
+	<body>
+		<div class="logo">
+			<img src="./images/logo.svg" alt="" />
+		</div>
+
+		<div class="container">
+			<div class="input-details">
+				<p class="bill-label">Bill</p>
+
+				<input class="input-amount input" placeholder="0" type="text" />
+
+				<p class="select-tip-label">Select Tip %</p>
+
+				<div class="select-tip-buttons">
+					<button>5%</button>
+					<button>10%</button>
+					<button>15%</button>
+					<button>25%</button>
+					<button>50%</button>
+					<input class="tip-custom-input" type="text" placeholder="Custom" />
+				</div>
+
+				<div class="number-of-people-label">
+					<p class="">Number of People</p>
+					<p class="error-msg">Can't be zero</p>
+				</div>
+
+				<input
+					type="text"
+					class="number-of-people-input input"
+					placeholder="0"
+				/>
+			</div>
+
+			<div class="display-information">
+				<div class="tip-amount">
+					<div class="label">
+						<h3>Tip Amount</h3>
+						<p>/ person</p>
+					</div>
+					<div class="tip-display display">
+						<h1>$0.00</h1>
+					</div>
+				</div>
+				<div class="total">
+					<div class="label">
+						<h3>Total</h3>
+						<p>/ person</p>
+					</div>
+					<div class="total-display display">
+						<h1>$0.00</h1>
+					</div>
+				</div>
+				<button class="btn-reset">Reset</button>
+			</div>
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
